@@ -11,7 +11,7 @@ ui <- fluidPage(
       selectInput(inputId = "selectColumn", h3("Smiertelnosc a "),
                   choices = list("Wiek" = 1,
                                  "Klasa" = 2,
-                                 "Czlonkowie rodziny" = 3,
+                                 "Liczba czlonkowie rodziny" = 3,
                                  "Plec" = 4),
                   selected = 1)
     ),
@@ -23,10 +23,10 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
              checkboxGroupInput("checkGroup", 
-                                h3("Szansa na przezycie "), 
+                                h3("Dzewo decyzyjne w oparciu o "), 
                                 choices = list("Wiek" = "Age",
-                                               "Klasa" = "Pclass",
-                                               "Czlonkowie rodziny" = "SibSp",
+                                               "Klase" = "Pclass",
+                                               "Liczbe czlonkowie rodziny" = "SibSp",
                                                "Plec" = "Sex"),
                                 selected = "Sex"))
     ,mainPanel( plotOutput(outputId = "secPlot")
